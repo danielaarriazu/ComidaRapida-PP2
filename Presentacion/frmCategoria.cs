@@ -23,10 +23,10 @@ namespace Presentacion
         int Fila = 0;
         private void frmCategoria_Load(object sender, EventArgs e)
         {
-                dgvCategoria.Visible = true;
-                dgvCategoria.DataSource = null;
-                dgvCategoria.DataSource = objCat.ListarCategoria();
-            
+            dgvCategoria.Visible = true;
+            dgvCategoria.DataSource = null;
+            dgvCategoria.DataSource = objCat.ListarCategoria();
+            dgvCategoria_Diseño();
         }
         private void btnOk_Click(object sender, EventArgs e)
         {
@@ -37,6 +37,7 @@ namespace Presentacion
                 dgvCategoria.Visible = true;
                 dgvCategoria.DataSource = null;
                 dgvCategoria.DataSource = objCat.ListarCategoria();
+                dgvCategoria_Diseño();
                 MessageBox.Show("Se agrego la categoria: " + txtDescripcion.Text + " con Exito", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDescripcion.Text = "";
             }
@@ -55,6 +56,7 @@ namespace Presentacion
                 objCat.Eliminar_Categoria(int.Parse(lblID.Text));
                 dgvCategoria.DataSource = null;
                 dgvCategoria.DataSource = objCat.ListarCategoria();
+                dgvCategoria_Diseño();
                 MessageBox.Show("Se elimino la categoria: " + txtDescripcion.Text + " con Exito", "Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -87,6 +89,7 @@ namespace Presentacion
                 objCat.Eliminar_Categoria(int.Parse(lblID.Text));
                 dgvCategoria.DataSource = null;
                 dgvCategoria.DataSource = objCat.ListarCategoria();
+                dgvCategoria_Diseño();
                 txtDescripcion.Text = "";
                 MessageBox.Show("Se elimino la categoria: " + txtDescripcion.Text + " con Exito", "Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -102,6 +105,11 @@ namespace Presentacion
         {
             btnOk.Enabled = true;
             txtDescripcion.Text = "";
+        }
+        private void dgvCategoria_Diseño()
+        {
+            dgvCategoria.Columns["Id_Categoria"].Visible = false;
+            dgvCategoria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
     }
 }

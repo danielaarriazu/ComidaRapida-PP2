@@ -33,6 +33,7 @@ namespace Presentacion
             dgvProductos.Visible = true;
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = objPro.ListarProducto();
+            dgvProducto_Diseño();
 
         }
         private void btnOk_Click(object sender, EventArgs e)
@@ -40,10 +41,11 @@ namespace Presentacion
             try
             {
 
-                objPro.Agregar_Producto(txtNombre.Text, int.Parse(txtPrecio.Text),int.Parse(cmbCategoria.SelectedValue.ToString));// agregar id categoria
+                objPro.Agregar_Producto(txtNombre.Text, float.Parse(txtPrecio.Text),int.Parse(cmbCategoria.SelectedValue.ToString()));// agregar id categoria
                 dgvProductos.Visible = true;
                 dgvProductos.DataSource = null;
-                dgvProductos.DataSource = objCat.ListarCategoria();
+                dgvProductos.DataSource = objPro.ListarProducto();
+                dgvProducto_Diseño();
                 MessageBox.Show("Se agrego la producto: " + txtNombre.Text + " a la categoria " + cmbCategoria.Text+" con Exito", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiartxt();
             }
@@ -68,6 +70,7 @@ namespace Presentacion
                 objPro.Eliminar_Producto(int.Parse(lblID.Text));
                 dgvProductos.DataSource = null;
                 dgvProductos.DataSource = objPro.ListarProducto();
+                dgvProducto_Diseño();
                 MessageBox.Show("Se elimino el producto: " + txtNombre.Text + " de la categoria " + cmbCategoria.Text + " con Exito", "Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiartxt();
             }
@@ -86,9 +89,11 @@ namespace Presentacion
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Fila = dgvProductos.CurrentRow.Index;
+
             lblID.Text = dgvProductos.Rows[Fila].Cells["Id_Producto"].Value.ToString();
             txtNombre.Text = dgvProductos.Rows[Fila].Cells["Nombre"].Value.ToString();
             txtPrecio.Text = dgvProductos.Rows[Fila].Cells["Precio"].Value.ToString();
+            cmbCategoria.SelectedValue = int.Parse(dgvProductos.Rows[Fila].Cells["Id_Categoria"].Value.ToString());
             //cargar combo box categoria
             btnOk.Enabled = false;
         }
@@ -101,9 +106,16 @@ namespace Presentacion
                 objPro.Eliminar_Producto(int.Parse(lblID.Text));
                 dgvProductos.DataSource = null;
                 dgvProductos.DataSource = objPro.ListarProducto();
+                dgvProducto_Diseño();
                 MessageBox.Show("Se elimino el producto: " + txtNombre.Text + " de la categoria " + cmbCategoria.Text + " con Exito", "Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiartxt();
             }
+        }
+        private void dgvProducto_Diseño()
+        {
+            dgvProductos.Columns["Id_Categoria"].Visible = false;
+            dgvProductos.Columns["Id_Producto"].Visible = false;
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
     }
 }

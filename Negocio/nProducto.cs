@@ -15,7 +15,7 @@ namespace Negocio
     {
         dProducto objPro = new dProducto();
 
-        public int Agregar_Producto(string Nombre, int Precio, int IdCategoria)
+        public int Agregar_Producto(string Nombre, float Precio, int IdCategoria)
         {
             if (String.IsNullOrEmpty(Nombre.Trim())) //valido que el campo Nombre no este vacio
             {

@@ -43,7 +43,7 @@ namespace Datos
         public DataTable Listar_Producto()
         {
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_Listar_Producto", conexion);
+            SqlCommand cmd = new SqlCommand("sp_ListarProducto", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
