@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D722100-B2EC-47D9-9C0E-E7AFFCF61053}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.7.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSesion.Designer.cs">
+      <DependentUpon>frmSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSesion.resx">
+      <DependentUpon>frmSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{DEB78250-5A02-4F94-817A-687D9E4AE4AC}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{2a9c6396-89ec-4d77-8349-7dedb80768a7}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{64648d9e-652e-4488-a3f5-3d232b1c8a7d}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carro-de-la-compra %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit persona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar per.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frances-fritas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburguesa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburguesa %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburguesa %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburguesa-skater-708.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-papas-fritas-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papas-fritas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_5057997261979626066_y.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picasion.com_144d74b7c734c4afca770e692711a767.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\six.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cuenta circulo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit persona1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar pedio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar per1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar persona.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frances-fritas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburguesa-skater-7081.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-papas-fritas-801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inicio de sesion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modificar persona.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papas-fritas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_5057997261979626066_y1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picasion.com_144d74b7c734c4afca770e692711a7671.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\six1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_User1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar persona.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

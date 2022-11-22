@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "iUrVXjxlS98XvAOfLThH9DNS9SSWuQhrlkMH2T2dWQR2WpxpMVnjlOwDz9iND5UgB1SBjAuzsT/TavxOXgFpoA==",
+  "success": true,
+  "projectFilePath": "E:\\tp pp2\\Tp PP2\\Entidades\\Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DanielaArriazu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\DanielaArriazu\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\DanielaArriazu\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\DanielaArriazu\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\DanielaArriazu\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\DanielaArriazu\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\DanielaArriazu\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
