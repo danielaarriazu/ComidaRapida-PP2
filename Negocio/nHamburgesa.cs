@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Negocio
 {
-    class nHamburgesa
+   public class nHamburgesa
     {
         dHamburgesa objHamb = new dHamburgesa();
 

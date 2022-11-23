@@ -65,6 +65,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmArmarHamburgesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArmarHamburgesa.Designer.cs">
+      <DependentUpon>frmArmarHamburgesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArmarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArmarPedido.Designer.cs">
+      <DependentUpon>frmArmarPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +109,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmArmarHamburgesa.resx">
+      <DependentUpon>frmArmarHamburgesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArmarPedido.resx">
+      <DependentUpon>frmArmarPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
@@ -278,6 +299,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\burger.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoria.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pedido.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-papas-fritas-802.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresco2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

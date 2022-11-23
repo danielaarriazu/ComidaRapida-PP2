@@ -60,6 +60,46 @@ namespace Datos
 
             return dt;
         }
+        public DataTable Listar_Medallon()
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_Lista_Medallon", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conexion.Open();
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch { }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return dt;
+        }
+        public DataTable Listar_Ingrediente()
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_Lista_Ingrediente", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conexion.Open();
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch { }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return dt;
+        }
         public int EliminarProducto(int Id)
         {
             int result = 0;
@@ -80,5 +120,50 @@ namespace Datos
             }
             return result;
         }
+        public DataTable SeleccionarProducto(int id_Producto,int id_Categoria)
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_SeleccionarProducto", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@idProducto", id_Producto);
+            cmd.Parameters.AddWithValue("@idCategoria", id_Categoria);
+            try
+            {
+                conexion.Open();
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch { }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return dt;
+        }
+        public DataTable SeleccionarCategoria()
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_Lista_Cate_Hambur", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                conexion.Open();
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch { }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return dt;
+        }
+
     }
 }

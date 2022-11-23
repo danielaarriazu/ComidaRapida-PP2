@@ -8,7 +8,7 @@ namespace Entidades
     {
         int id_Producto { get; set; }
         string Nombre { get; set; }
-        float Precio { get; set; }
+       public float Precio { get; set; }
         int Id_Categoria { get; set; }
     }
 }

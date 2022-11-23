@@ -37,6 +37,14 @@ namespace Negocio
         {
             return objPro.Listar_Producto();
         }
+        public DataTable ListarMedallon()
+        {
+            return objPro.Listar_Medallon();
+        }
+        public DataTable ListarIngrediente()
+        {
+            return objPro.Listar_Ingrediente();
+        }
         public int Eliminar_Producto(int Id)
         {
             if (Id == 0) // valido que el campo ID no este vacio
@@ -45,6 +53,14 @@ namespace Negocio
             }
 
             return objPro.EliminarProducto(Id);
+        }
+        public DataTable Seleccionar_Producto(int Id_Producto, int Id_Categoria)
+        {
+            return objPro.SeleccionarProducto(Id_Producto,Id_Categoria);
+        }
+        public DataTable Seleccionar_Categoria()
+        {
+            return objPro.SeleccionarCategoria();
         }
     }
 }

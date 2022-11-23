@@ -29,8 +29,9 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoria));
             this.pnlAgregarItems = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace Presentacion
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.pnlGrillaCategoria = new System.Windows.Forms.Panel();
-            this.btnAgregarProductos = new System.Windows.Forms.Button();
             this.pnlAgregarItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.pnlGrillaCategoria.SuspendLayout();
@@ -49,7 +49,6 @@ namespace Presentacion
             // pnlAgregarItems
             // 
             this.pnlAgregarItems.BackColor = System.Drawing.Color.Coral;
-            this.pnlAgregarItems.Controls.Add(this.btnAgregarProductos);
             this.pnlAgregarItems.Controls.Add(this.btnEliminar);
             this.pnlAgregarItems.Controls.Add(this.lblID);
             this.pnlAgregarItems.Controls.Add(this.lblTitulo);
@@ -137,23 +136,23 @@ namespace Presentacion
             // dgvCategoria
             // 
             this.dgvCategoria.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCategoria.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCategoria.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCategoria.Location = new System.Drawing.Point(0, 0);
             this.dgvCategoria.Name = "dgvCategoria";
@@ -172,22 +171,6 @@ namespace Presentacion
             this.pnlGrillaCategoria.Size = new System.Drawing.Size(528, 251);
             this.pnlGrillaCategoria.TabIndex = 2;
             // 
-            // btnAgregarProductos
-            // 
-            this.btnAgregarProductos.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
-            this.btnAgregarProductos.FlatAppearance.BorderSize = 2;
-            this.btnAgregarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProductos.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAgregarProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProductos.Location = new System.Drawing.Point(377, 3);
-            this.btnAgregarProductos.Name = "btnAgregarProductos";
-            this.btnAgregarProductos.Size = new System.Drawing.Size(124, 53);
-            this.btnAgregarProductos.TabIndex = 56;
-            this.btnAgregarProductos.Text = "Agregar Productos";
-            this.btnAgregarProductos.UseVisualStyleBackColor = true;
-            this.btnAgregarProductos.Click += new System.EventHandler(this.btnAgregarProductos_Click);
-            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,6 +178,7 @@ namespace Presentacion
             this.ClientSize = new System.Drawing.Size(528, 450);
             this.Controls.Add(this.pnlGrillaCategoria);
             this.Controls.Add(this.pnlAgregarItems);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCategoria";
             this.Text = "Categoria";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
@@ -217,6 +201,5 @@ namespace Presentacion
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvCategoria;
         private System.Windows.Forms.Panel pnlGrillaCategoria;
-        private System.Windows.Forms.Button btnAgregarProductos;
     }
 }

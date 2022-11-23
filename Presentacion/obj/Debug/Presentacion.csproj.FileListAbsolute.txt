@@ -28,3 +28,6 @@ E:\tp pp2\Tp PP2\Presentacion\bin\Debug\System.Security.Principal.Windows.xml
 E:\tp pp2\Tp PP2\Presentacion\obj\Debug\Presentacion.frmCliente.resources
 E:\tp pp2\Tp PP2\Presentacion\obj\Debug\Presentacion.frmCategoria.resources
 E:\tp pp2\Tp PP2\Presentacion\obj\Debug\Presentacion.frmProductos.resources
+E:\tp pp2\Tp PP2\Presentacion\obj\Debug\Presentacion.frmInicio.resources
+E:\tp pp2\Tp PP2\Presentacion\obj\Debug\Presentacion.frmArmarHamburgesa.resources
+E:\tp pp2\Tp PP2\Presentacion\obj\Debug\Presentacion.frmArmarPedido.resources

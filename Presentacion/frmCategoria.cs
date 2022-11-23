@@ -94,13 +94,6 @@ namespace Presentacion
                 MessageBox.Show("Se elimino la categoria: " + txtDescripcion.Text + " con Exito", "Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void btnAgregarProductos_Click(object sender, EventArgs e)
-        {
-            frmProductos prod = new frmProductos();
-            prod.Show();
-        }
-
         private void pnlAgregarItems_Click(object sender, EventArgs e)
         {
             btnOk.Enabled = true;

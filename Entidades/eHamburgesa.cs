@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Entidades
 {
-    class eHamburgesa
+    public class eHamburgesa
     {
         int Id_Hamburgesa { get; set; }
-        int Id_Producto { get; set; }
         float Precio { get; set; }
+        int Id_Producto { get; set; }
     }
 }

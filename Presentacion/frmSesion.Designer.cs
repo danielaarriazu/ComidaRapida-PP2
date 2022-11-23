@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSesion));
             this.btnIngresar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,9 +68,9 @@ namespace Presentacion
             this.label3.ForeColor = System.Drawing.Color.DarkOrange;
             this.label3.Location = new System.Drawing.Point(145, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 24);
+            this.label3.Size = new System.Drawing.Size(65, 24);
             this.label3.TabIndex = 4;
-            this.label3.Text = "SIX";
+            this.label3.Text = "TWO";
             // 
             // label4
             // 
@@ -163,8 +164,9 @@ namespace Presentacion
             this.ClientSize = new System.Drawing.Size(294, 349);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSesion";
-            this.Text = "Form1";
+            this.Text = "Inicio Sesion";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
